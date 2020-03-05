@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
+    <title>Product Landing Page</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&display=swap');
+      body, html {
+        height: 100%;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: 'Hind', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+      }
+      #dec_container {
+        margin-top: 48.8px;
+        background-image: url("https://www.designboom.com/wp-content/uploads/2019/01/IBM-Q-system-one-quantum-computing-system-ces-2019-designboom-1800.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #how_it_works::before, #products_section::before, #contact_section::before {
+        display: block;
+        content: "";
+        height: 50px;
+        margin: -50px 0 0;
+      }
+      header div {
+        display: flex;
+        align-items: center;
+        padding: 0px 25px;
+      }
+      nav a {
+        display: block;
+        padding: 15px 17px;
+        text-decoration: none;
+        color: #fff;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        letter-spacing: 3px;
+        /* padding: 7px 0px; */
+      }
+      header, nav, button, .product_box h2, div > h2:first-child, #submit {
+        background-color: #000;
+        color: #fff;
+      }
+      nav {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #header-img {
+        max-width: 48px;
+        max-height: 48px;
+        margin-right: 13px;
+      }
+      /* video code */
+      iframe {
+        width: calc(44.84vw);
+        height: calc(25.23vw);
+      }
+      .sub-headings {
+        display: inline-block;
+        margin-bottom: 7px;
+        padding: 7px 9px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        background-color: #fff;
+        color: #000;
+        border-bottom: 3px solid;
+      }
+      @media (max-width: 770px) {
+        header {
+          flex-direction: column;
+        }
+        nav {
+          width: 100%;
+          margin-top: 10px;
+        }
+        #dec_container {
+          margin-top: 107.6px;
+        }
+        iframe {
+          width: 80vw;
+          height: calc(45vw);
+        }
+        #how_it_works::before, #products_section::before, #contact_section::before {
+          display: block;
+          content: "";
+          height: 110px;
+          margin: -110px 0 0;
+        }
+      }
+      @media (max-width: 450px) {
+        nav {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        }
+        #dec_container {
+          margin-top: 48px;
+        }
+        iframe {
+          width: 90vw;
+          height: calc(50vw);
+        }
+        footer {
+          margin-bottom: 50px;
+        }
+      }
+      /* Fix this */
+      nav a:visited {
+          background-color: red;
+      }
+      nav a:hover {
+        background-color: #fff;
+        color: #000;
+      }
+      h1, #how_it_works, #products_section, #contact_section  {
+        text-align: center;
+      }
+      #how_it_works, #products_section, #contact_section {
+        margin: 23px 0;
+      }
+      .products_container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      ul {
+        margin: 0;
+        padding: 10px 0;
+        list-style-type: none;
+        line-height: 1.7;
+      }
+      .product_box {
+        border: 1px solid #000;
+        width: 280px;
+        margin: 10px 15px;
+      }
+     button, #submit {
+        padding: 10px 15px;
+        margin: 5px;
+        text-transform: uppercase;
+        border-radius: 4px;
+      }
+      #email {
+        margin: 5px;
+        padding: 8px 10px;
+      }
+      ul > li:first-child {
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+      .product_box h2 {
+        margin: 0 ;
+        padding: 10px 0;
+        font-weight: 300;
+      }
+      h1 {
+        color: #fff;
+        font-weight: 300;
+        position: relative;
+        top: 29px;
+        letter-spacing: 3px;
+      }
+      footer {
+        height: 50px;
+        text-align: right;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header id="header">
+      <div><img id="header-img" src="https://drive.google.com/uc?id=1lKxQnIAcV9sHfWge68IJEoWIJOCT8Mc6" alt="logo">Plank Quantum Computing</div>
+      <nav id="nav-bar">
+        <a class="nav-link" href="#how_it_works">Concept</a>
+        <a class="nav-link" href="#products_section">Products</a>
+        <a class="nav-link" href="#contact_section">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Decoration Image and some text -->
+    <div id="dec_container">
+      <h1>The Future is here</h1>
+      <!-- <h1 id="here">here</h1> -->
+    </div>
+
+    <!-- how it works section -->
+    <div id="how_it_works">
+      <h2 class="sub-headings">The What and The Why</h2>
+      <p>Check out the video below that briefly explains what this is all about.</p>
+      <iframe id="video" src="https://www.youtube-nocookie.com/embed/WVv5OAR4Nik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- the products section -->
+    <div id="products_section">
+      <h2 class="sub-headings">Quantum Personal Computers</h2>
+      <p>Select the machine that's right for you.</p>
+      <div id="products" class="products_container">
+        <div class="product_box">
+          <h2>Q100</h2>
+          <ul>
+            <li>$1000</li>
+            <li>128 Qubits</li>
+            <li>Intel QPU 1 Bhz</li>
+            <li>Less Than 100kW</li>
+            <li>1 Year Warranty</li>
+          </ul>
+          <button type="button">Select</button>
+        </div>
+
+        <div class="product_box">
+          <h2>Q200</h2>
+          <ul>
+            <li>$1200</li>
+            <li>512 Qubits</li>
+            <li>Intel QPU 1.5 Bhz</li>
+            <li>Less Than 50kW</li>
+            <li>1 Year Warranty</li>
+          </ul>
+          <button type="button">Select</button>
+        </div>
+
+        <div class="product_box">
+          <h2>Q300</h2>
+          <ul>
+            <li>$1500</li>
+            <li>1000 Qubits</li>
+            <li>Intel QPU 2 Bhz</li>
+            <li>Less Than 25kW</li>
+            <li>1 Year Warranty</li>
+          </ul>
+          <button type="button">Select</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact section -->
+    <div id="contact_section">
+      <h2 class="sub-headings">Contact</h2>
+      <p>Please provide the details below and we'll get back to you.</p>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input name="email" id="email" type="email" placeholder="Your Email Address" required>
+        <input id="submit" type="submit" value="Get Notified">
+      </form>
+    </div>
+
+    <!-- footer section -->
+    <footer>
+      <hr>
+      ©Copyrights Terms and Conditions
+    </footer>
+
+  </body>
+</html>
